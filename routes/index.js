@@ -18,9 +18,8 @@ router.use(bodyParser.json());
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  let posts;
   query.Posts().then( (data) =>{
-    posts = data[0]
+    let posts = data[0]
     res.render('index', {
       posts: posts
     });
