@@ -1,0 +1,28 @@
+<h1>Make a new blog post</h1>
+
+<h3>{{message}}</h3>
+
+<form class='myForm' action="/new" method='POST'>
+  <fieldset>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title" class="form-control" placeholder="Post title">
+    </div>
+    <div class="form-group">
+      <label for="author_id">Select Author</label>
+      <select id="author_id" name="author_id" class="form-control">
+        <option>Sam Persian</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="body">Body</label>
+      <textarea name="body" id="body" class="form-control" placeholder="Post"cols="50" rows="10"></textarea>
+    </div>
+    <div class="form-check">
+      <label for="can_comment" class="form-check-label">
+        <input id="can_comment" name="can_comment" class="form-check-input" type="checkbox" value="true">
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>
