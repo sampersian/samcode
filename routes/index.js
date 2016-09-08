@@ -23,8 +23,6 @@ router.get('/', function(req, res, next) {
     res.render('index', {
       posts: posts
     });
-  }).catch(function(err) {
-    return next(error)
   })
 });
 
