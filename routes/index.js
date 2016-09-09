@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var query = require('../db/query');
+var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser')
 
 /** bodyParser.urlencoded(options)
@@ -14,6 +15,7 @@ router.use(bodyParser.urlencoded({
 /**bodyParser.json(options)
  * Parses the text as JSON and exposes the resulting object on req.body.
  */
+router.use(cookieParser());
 router.use(bodyParser.json());
 
 /* GET home page. */
@@ -25,6 +27,14 @@ router.get('/', function(req, res, next) {
     });
   })
 });
+
+router.get('/users', function(req, res, next) {
+  if (typeof req.cookies.authorId === "undefined") {
+    res.render("signup")
+  } else {
+    res.render("login")
+  }
+})
 
 router.get('/new', function(req, res, next) {
   res.render('new');
@@ -44,5 +54,6 @@ router.post('/new', function(req, res, next) {
   })
 
 })
+
 
 module.exports = router;

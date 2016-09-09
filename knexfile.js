@@ -1,11 +1,13 @@
-
+// Update with your config settings.
 
 module.exports = {
 
   development: {
-    client: 'pg',
-    connection: process.env.DATABASE_URL + '?ssl=true'
-  },
+     client: 'pg',
+     connection: 'postgres://pbflearqxpiols:taIOYKFH5xgeBxYdmBN10VvHaE@ec2-54-243-236-70.compute-1.amazonaws.com:5432/da0sg0crrb9frk' + '?ssl=true'
+    //  connection: process.env.DATABASE_URL + '?ssl=true'
+
+   },
 
   staging: {
     client: 'postgresql',
