@@ -5,6 +5,7 @@ module.exports = {
   development: {
      client: 'pg',
      connection: process.env.DATABASE_URL + '?ssl=true'
+
    },
 
   staging: {
@@ -25,7 +26,11 @@ module.exports = {
 
   production: {
     client: 'postgresql',
-    connection: process.env.DATABASE_URL + '?ssl=true',
+    connection: {
+      database: process.env.DATABASE_URL + '?ssl=true',
+      user:     process.env.DATABASE_USER,
+      password: process.env.DATABASE_PASSWORD
+    },
     pool: {
       min: 2,
       max: 10
