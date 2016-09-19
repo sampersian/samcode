@@ -33,3 +33,12 @@ a {
 .newPostButtonBox {
   text-align: center;
 }
+
+.comment-body {
+  padding:10px;
+  background-color: darkgrey;
+  color: black;
+}
+
+.aComment {
+}

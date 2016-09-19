@@ -1,17 +1,23 @@
-<h1>{{me}}</h1>
-<p>Welcome to my blog</p>
-<div>
-  <ul class="people_list">
-    {{#each posts}}
-    <div class="jumbotron">
-      <h1 class="display-3">{{this.title}}</h1>
-      <h3 class="lead">{{this.created_at}}</h3>
-      <hr class="m-y-2">
-      <p>{{this.body}}</p>
-      <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Go to post</a>
-      </p>
-    </div>
-    {{/each}}
-  </ul>
+
+<div class="newPostButtonBox">
+  <button class='btn' type="button" name="button" onclick="window.location.assign('/new')">Create Post</button>
+  <h6>New Post Message</h6>
 </div>
+
+<ul class='postList'>
+  {{#each posts}}
+    <li class="postItem">
+      <div class="postItemDiv orderly">
+        <a href="../post/{{this.id}}">
+          <div>
+            <h1>{{this.title}}</h1>
+            <h3>{{this.subtitle}}</h3>
+          </div>
+        </a>
+        <h4>{{this.author_id}}</h4>
+      </div>
+    </li>
+
+
+  {{/each}}
+</ul>

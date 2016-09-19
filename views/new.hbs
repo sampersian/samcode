@@ -1,4 +1,4 @@
-<h1>Make a new blog post</h1>
+<h1>Make a new post</h1>
 
 <h3>{{message}}</h3>
 
@@ -8,11 +8,16 @@
       <label for="title">Title</label>
       <input type="text" name="title" id="title" class="form-control" placeholder="Post title">
     </div>
+      <div class="form-group">
+        <label for="subtitle">Subtitle</label>
+        <input type="text" name="subtitle" id="subtitle" class="form-control" placeholder="Post subtitle">
+      </div>
     <div class="form-group">
       <label for="author_id">Select Author</label>
-      <select id="author_id" name="author_id" class="form-control">
+      <!-- <select id="author_id" name="author_id" class="form-control">
         <option>Sam Persian</option>
-      </select>
+      </select> -->
+      <input type="text" name="author_id" id="author_id" class="form-control" placeholder="Author Name">
     </div>
     <div class="form-group">
       <label for="body">Body</label>
@@ -20,8 +25,9 @@
     </div>
     <div class="form-check">
       <label for="can_comment" class="form-check-label">
-        <input id="can_comment" name="can_comment" class="form-check-input" type="checkbox" value="true">
+        Allow Comments?
       </label>
+      <input id="can_comment" name="can_comment" class="form-check-input" type="checkbox" value="true"> Yes
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </fieldset>
