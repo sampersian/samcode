@@ -1,3 +1,17 @@
 <h1>{{me}}</h1>
 <p>Welcome to my blog</p>
-<div>{{posts}}</div>
+<div>
+  <ul class="people_list">
+    {{#each posts}}
+    <div class="jumbotron">
+      <h1 class="display-3">{{this.title}}</h1>
+      <h3 class="lead">{{this.created_at}}</h3>
+      <hr class="m-y-2">
+      <p>{{this.body}}</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Go to post</a>
+      </p>
+    </div>
+    {{/each}}
+  </ul>
+</div>

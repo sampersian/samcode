@@ -1,8 +1,35 @@
 body {
-  padding: 50px;
+  padding: 20px 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.orderly {
+  border: 3px solid black;
+  margin: 15px auto;
+  padding: 10px;
+}
+
+.greeting {
+  text-align: center;
+}
+
+.postList {
+  list-style: none;
+  padding: 0px;
+}
+
+.post-body {
+  padding-left: 100px;
+}
+
+.postItemDiv {
+
+}
+
+.newPostButtonBox {
+  text-align: center;
 }

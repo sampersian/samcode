@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var query = require('../db/query');
 var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 
 /** bodyParser.urlencoded(options)
  * Parses the text as URL encoded data (which is how browsers tend to send form data from regular forms set to POST)
@@ -21,7 +21,8 @@ router.use(bodyParser.json());
 /* GET home page. */
 router.get('/', function(req, res, next) {
   query.Posts().then( (data) =>{
-    let posts = data[0]
+    let posts = data
+    console.log(posts[0]);
     res.render('index', {
       posts: posts
     });
